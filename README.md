@@ -32,29 +32,28 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| JUMPBOXPROVISIONER | Gateway  | 10.0.0.9   | Linux            |
+| JUMPBOXPROVISIONER | Gateway  | 10.0.0.9/40.88.139.160   | Linux            |
 | Web-1     | DVWA Server         | 10.0.0.10           |    Linux              |
 | Web-2     |  DVWA Server        |  10.0.0.11          |          Linux        |
-| Elk Server     |  ElasticSearch Stack        | 10.2.0.4           |  Linux                |
+| Elk Server     |  ElasticSearch Stack        | 10.2.0.4/20.98.64.48           |  Linux                |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 115.64.18.217 (my home's previous public IP)
+- My home's previous public IP: 115.64.18.217
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
-
+Machines within the network can only be accessed by the jumpbox machine.
+- The ELK (monitoring) VM can only be accessed from the jumpbox machine with private ip 10.0.0.9 through port 5601
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
-
+| Jump Box | No - ssh (port 22)              | 115.64.18.217    |
+| Web machines         |  No - ssh (port 22)    |  10.0.0.9         |
+| ELK     | No - (port 5601)      |  10.0.0.9                  |
+| ELK     | No - (port 9200)      |  10.0.0.9
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
