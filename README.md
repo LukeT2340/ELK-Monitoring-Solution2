@@ -50,10 +50,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | No - ssh (port 22)              | 115.64.18.217    |
-| Web machines         |  No - ssh (port 22)    |  10.0.0.9         |
-| ELK     | No - (port 5601)      |  10.0.0.9                  |
-| ELK     | No - (port 9200)      |  10.0.0.9
+| Jump Box | No              | 115.64.18.217 - ssh (port 22)    |
+| Web machines         |  No - ssh (port 22)    |  10.0.0.9 - ssh (port 22)         |
+| ELK     | No     |  10.0.0.9 - (port 5601)                 |
+| ELK     | No     |  10.0.0.9 - (port 9200)
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
