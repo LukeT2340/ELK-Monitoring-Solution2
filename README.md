@@ -55,13 +55,13 @@ A summary of the access policies in place can be found in the table below.
 | ELK     | No     |  10.0.0.9 - (port 5601, port 9200)            |
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because ansible can configure multiple machines at a single time. This removes the risk of disparities in configuration between machines, and is much quicker.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Create new Virtual machine to run ELK_TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- Install Docker
+- Use playbooks to download and install ELK image
+- Use playbooks to download and install ELK modules "Filebeat" and "Metricbeat"
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
