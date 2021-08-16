@@ -51,7 +51,7 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | No              | 115.64.18.217 - ssh (port 22)    |
-| Web machines         |  No - ssh (port 22)    |  10.0.0.9 - ssh (port 22)         |
+| Web machines         |  No   |  10.0.0.9 - ssh (port 22)         |
 | ELK     | No     |  10.0.0.9 - (port 5601)                 |
 | ELK     | No     |  10.0.0.9 - (port 9200)
 ### Elk Configuration
